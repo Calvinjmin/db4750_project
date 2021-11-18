@@ -1,9 +1,9 @@
 <html>
 <head>
-	<title>MySQLi Example</title>
+	<title>Athletes</title>
 </head>
 <body>
-    <h1>Database 4750</h1>
+	<h3> Athletes </h3>
 <?php
 
 function printList() {
