@@ -3,6 +3,7 @@
 	<title>MySQLi Example</title>
 </head>
 <body>
+    <h1>Database 4750</h1>
 <?php
 
 function printList() {
@@ -21,14 +22,22 @@ function printList() {
 		return null;
 	}
 		
-	$sql = "SELECT computing_id, first_name, last_name FROM athlete";
+	$sql = 'CALL selectAthleteLeague()';
 	$result = $db_connection->query($sql);
 	
 	if ($result->num_rows > 0) {
 	  // output data of each row
-	  while($row = $result->fetch_assoc()) {
-		echo "id: " . $row["computing_id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-	  }
+      echo "<table>";
+      echo "<td>Name</td><td>Team</td><td>League</td>";
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row["first_name"]. " " . $row["last_name"]. "</td>";
+            echo "<td>" . $row["team_name"]. "</td>";
+            echo "<td>" . $row["league_name"]. "</td>";
+            echo "</tr>";
+          }
+        echo "</table>";
+
 	} else {
 	  echo "0 results";
 	}
