@@ -29,3 +29,5 @@ if (mysqli_query($conn, $sql)) {
 }
 
 $conn->close();
+
+header("Location:../../index.php");
