@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <style type="text/css">
     body {
         background-color: #f6f6f8;
@@ -29,6 +30,10 @@
         text-align: center;
         padding: 25px 10px;
         text-decoration: none;
+    }
+
+    .topNav h2 {
+        padding: 30px 10px;
     }
 
     /* Change the link color to #111 (black) on hover */
