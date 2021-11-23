@@ -76,7 +76,7 @@
         </div>
         <!--Delete Container -->
         <div id="delete_div" class="role" name="Delete Container" style="display:none;">
-            <h1>Department </h1>
+            <h1>Delete </h1>
         </div>
         <!--Update Container -->
         <div id="update_div" class="role" name="Update Container" style="display:none;">
