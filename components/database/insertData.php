@@ -1,12 +1,15 @@
 <html>
+<h5 class="title is-5">Insert to Data into our Database!</h5>
 <form action="components/database/insert.php" method="post">
     <label class="label">Table</label>
-    <div class="select">
-        <select>
-            <option>Athlete</option>
-            <option>Sport</option>
-            <option>Team</option>
-        </select>
+    <div style="padding-bottom: 1%;">
+        <div class="select is-rounded">
+            <select>
+                <option>Athlete</option>
+                <option>Sport</option>
+                <option>Team</option>
+            </select>
+        </div>
     </div>
 
     <div class="field">
@@ -45,6 +48,7 @@
         </div>
     </div>
 
+    <!-- 
     <div class="control">
         <label class="label">Currently Playing</label>
         <label class="radio">
@@ -56,6 +60,7 @@
             No
         </label>
     </div>
+    -->
 
 
     <div class="field">
