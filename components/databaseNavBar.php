@@ -80,7 +80,7 @@
         </div>
         <!--Update Container -->
         <div id="update_div" class="role" name="Update Container" style="display:none;">
-            <h1>Search </h1>
+            <h1>Update </h1>
         </div>
         <!--Export Container -->
         <div id="export_div" class="role" name="Export Container" style="display:none;">
