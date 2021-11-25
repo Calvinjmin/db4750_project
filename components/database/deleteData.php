@@ -27,7 +27,7 @@
         margin-left: auto;
         margin-right: auto;
 	    overflow: auto;">
-        <h5 class="title is-5">Delete Data from our Database!</h5>
+        <h5 class="title is-5">Delete Athletes from our Database!</h5>
         <?php
         function tableAthletes()
         {

@@ -84,7 +84,7 @@
         </div>
         <!--Export Container -->
         <div id="export_div" class="role" name="Export Container" style="display:none;">
-            <h1>Export </h1>
+        <?php include "database/exportData.php" ?>
         </div>
     </div>
 </body>
