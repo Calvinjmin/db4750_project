@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION["user"] = "User";
+?>
 <html>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -84,7 +88,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="database.php">Interact with the Database</a></li>
-            <li><a href="#" id="open-model" onclick="showUserPopup();"><?php include 'userInfo.php';?></a></li>
+            <li><a href="#" id="open-model" onclick="showUserPopup();"><?php echo $_SESSION["user"]?></a></li>
         </ul>
     </div>
 

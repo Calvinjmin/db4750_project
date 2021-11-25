@@ -20,8 +20,7 @@
     $query = mysqli_query($conn, $sql);
     $result = mysqli_fetch_array($query);
 
-    echo $result['username'];
-    echo $result['password'];
+    $_SESSION["user"] = $usernameForm;
 
     if ( $result['username'] != null and $result['password'] != null ) {
         echo $result['username'];
