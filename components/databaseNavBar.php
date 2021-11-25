@@ -71,19 +71,19 @@
 
     <div id="ajax_exchange" style="margin-left:10%;height:100%;">
         <!--Insert Container -->
-        <div id="insert_div" class="role" name="Insert Container">
+        <div id="insert_div" name="Insert Container">
             <?php include "database/insertData.php" ?>
         </div>
         <!--Delete Container -->
-        <div id="delete_div" class="role" name="Delete Container" style="display:none;">
+        <div id="delete_div" name="Delete Container" style="display:none;">
             <?php include "database/deleteData.php" ?>
         </div>
         <!--Update Container -->
-        <div id="update_div" class="role" name="Update Container" style="display:none;">
-            <h1>Update </h1>
+        <div id="update_div" name="Update Container" style="display:none;">
+        <?php include "database/updateData.php" ?>
         </div>
         <!--Export Container -->
-        <div id="export_div" class="role" name="Export Container" style="display:none;">
+        <div id="export_div" name="Export Container" style="display:none;">
         <?php include "database/exportData.php" ?>
         </div>
     </div>
