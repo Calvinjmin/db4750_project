@@ -30,4 +30,4 @@ if (mysqli_query($conn, $sql)) {
 
 $conn->close();
 
-header("Location:../../database.php");
+header("Location:../../../database.php");

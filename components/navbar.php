@@ -88,10 +88,11 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="database.php">Interact with the Database</a></li>
-            <li><a href="#" id="open-model" onclick="showUserPopup();"><?php echo $_SESSION["user"]?></a></li>
+            <li><a href="#" id="open-model" onclick="//showUserPopup();"><?php echo $_SESSION["user"]?></a></li>
         </ul>
     </div>
 
+    <!--
     <div class="modal">
         <div id = "Signup" >
             <div class="modal-background"></div>
@@ -100,7 +101,6 @@
                     <p class="modal-card-title">Log In</p>
                     <button class="delete" aria-label="close" onclick="removeUserPopup();"></button>
                 </header>
-                    <!-- Card Body -->
                 <form onsubmit="login();" method = "post">
                     <section class="modal-card-body">
                         <div class="field">
@@ -124,5 +124,6 @@
             </div>
         </div>
     </div>
+    -->
 
 </html>

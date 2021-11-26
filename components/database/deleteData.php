@@ -9,14 +9,17 @@
         $(document).ready(function() {
             $('.btn').unbind().click(function() {
                 var computing_id = $(this).val();
-                var ajaxurl = 'components/database/delete.php',
+                var conf = confirm("Delete this athlete (" + computing_id+ ") from the database?");
+                if ( conf ) {
+                    var ajaxurl = 'components/database/delete.php',
                     data = {
                         'computing_id': computing_id
                     };
-                $.post(ajaxurl, data, function(response) {
-                    location.reload();
-                    alert("Item was deleted successfully");
-                });
+                    $.post(ajaxurl, data, function(response) {
+                        location.reload();
+                        alert("Item was deleted successfully");
+                    });
+                }
             });
         });
     }

@@ -23,10 +23,28 @@
 
         });
     }
+
+    $(document).ready(function() { 
+        $("#athleteInsertSubmit").click(function() {
+            document.getElementById('athleteInsertForm').submit();
+        });
+    });
+
+    $(document).ready(function() { 
+        $("#sportInsertSubmit").click(function() {
+            document.getElementById('sportInsertForm').submit();
+        });
+    });
+
+    $(document).ready(function() { 
+        $("#teamInsertSubmit").click(function() {
+            document.getElementById('teamInsertForm').submit();
+        });
+    });
 </script>
 
 <h5 class="title is-5">Insert to Data into our Database!</h5>
-<form>
+<form id="tableSelectorForm">
 <label class="label">Table</label>
     <div style="padding-bottom: 1%;">
         <div class="select is-rounded">
@@ -40,7 +58,7 @@
 </form>
 
 <div id="athleteInsert">
-    <form action="components/database/inserting/insertAthlete.php" method="post">
+    <form id ="athleteInsertForm" action="components/database/inserting/insertAthlete.php" method="post">
         <div class="field">
             <label class="label">Computing ID</label>
             <div class="control">
@@ -102,7 +120,7 @@
 
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link" type="submit">Submit</button>
+                <button class="button is-link" id="athleteInsertSubmit">Submit</button>
             </div>
             <div class="control">
                 <button class="button is-link is-light">Cancel</button>
@@ -113,7 +131,7 @@
 </div>
 
 <div id="sportInsert" style="display:none;">
-    <form action="components/database/inserting/insertSport.php" method="post">
+    <form id ="sportInsertForm" action="components/database/inserting/insertSport.php" method="post">
         <div class="field">
             <label class="label">Sport ID</label>
             <div class="control">
@@ -131,7 +149,7 @@
 
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link" type="submit">Submit</button>
+                <button class="button is-link" id="sportInsertSubmit">Submit</button>
             </div>
             <div class="control">
                 <button class="button is-link is-light">Cancel</button>
@@ -141,7 +159,7 @@
 </div>
 
 <div id="teamInsert" style="display: none;">
-    <form action="components/database/inserting/insertTeam.php" method="post">
+    <form id="teamInsertForm" action="components/database/inserting/insertTeam.php" method="post">
         <div class="field">
             <label class="label">Team ID</label>
             <div class="control">
@@ -175,7 +193,7 @@
 
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link" type="submit">Submit</button>
+                <button class="button is-link" id="teamInsertSubmit">Submit</button>
             </div>
             <div class="control">
                 <button class="button is-link is-light">Cancel</button>

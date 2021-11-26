@@ -3,6 +3,7 @@
         position: fixed;
         left: 10px;
         right: 10px;
+        padding-top: 2%;
         bottom: 1%;
         width: 100%;
         color: black;
