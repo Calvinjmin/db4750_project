@@ -137,18 +137,20 @@
                 <section class="modal-card-body">
                 <label class="label">Attribute</label>
 
-                <div style="padding-bottom: 1%; display: inline-block">
-                    <div class="select is-rounded" style="float: left;">
-                        <select id="attributeSelector">
-                            <option value = "computing_id">Computing ID</option>
-                            <option value = "first_name">First Name</option>
-                            <option value = "last_name">Last Name</option>
-                            <option value = "age">Age</option>
-                            <option value = "grad_year">Graduation Year</option>
-                            
-                        </select>
+                <div class="field is-grouped">
+                    <div style="padding-bottom: 1%; display: inline-block">
+                        <div class="select is-rounded" style="float: left;">
+                            <select id="attributeSelector">
+                                    <option value = "computing_id">Computing ID</option>
+                                    <option value = "first_name">First Name</option>
+                                    <option value = "last_name">Last Name</option>
+                                    <option value = "age">Age</option>
+                                    <option value = "grad_year">Graduation Year</option>
+                        
+                            </select>
+                        </div>
+                        <button id="selectAttribute" style="float:right" onclick="updateFormChange();">Select</button>
                     </div>
-                    <button id="selectAttribute" style="float:right" onclick="updateFormChange();">Select</button>
                 </div>
 
                 <form onsubmit="updateEntry();" method ="post">
