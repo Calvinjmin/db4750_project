@@ -1,8 +1,6 @@
 <script>
     var username = "";
     var password = "";
-
-
 </script>
 <html>
     <head>

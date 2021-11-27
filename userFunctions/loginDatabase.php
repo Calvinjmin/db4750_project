@@ -10,6 +10,7 @@
 		$(document).ready(function() {
 			$('#changeAthlete').click(function() {
                 var username = $('#usernameSecure').text();
+                alert(username);
 				$.ajax({
             		type: "POST",
 					url: "changeAthlete.php",
@@ -44,17 +45,17 @@ if ($conn->connect_error) {
 
 $username = mysqli_real_escape_string($conn, $_REQUEST['username']);
 $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
+$passwordQuery = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'") -> fetch_assoc();
 
-$session_username = $username;
-$session_password = $password;
+if (password_verify($password, $passwordQuery["password"])) {
 
-$sql = "SELECT * FROM user WHERE username = '$session_username' AND password = '$session_password'";
-$result = $conn -> query($sql);
+    $sql = "SELECT * FROM user WHERE username = '$username'";
+    $result = $conn -> query($sql);
 
-$sqlProcedure = 'CALL selectAthleteLeague()';
-$resultProcedure = $conn->query($sqlProcedure);
+    $sqlProcedure = 'CALL selectAthleteLeague()';
+    $resultProcedure = $conn->query($sqlProcedure);
 
-if ($result and $resultProcedure) {
+    if ($result and $resultProcedure) {
     echo "<table class=\"table is-bordered is-striped is-narrow is-hoverable\">";
     echo "<th>Username</th><th>Favorite Athlete</th><th>Change Athlete</th>";
     foreach ($result->fetch_all(MYSQLI_ASSOC) as $row) {
@@ -86,8 +87,12 @@ if ($result and $resultProcedure) {
         echo "</tr>";
     }
     echo "</table>";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+else{
+    echo "Invalid Credentials!";
 }
 ?>
 <?php include("../components/footer.php"); ?>
