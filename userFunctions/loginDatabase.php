@@ -10,7 +10,6 @@
 		$(document).ready(function() {
 			$('#changeAthlete').click(function() {
                 var username = $('#usernameSecure').text();
-                alert(username);
 				$.ajax({
             		type: "POST",
 					url: "changeAthlete.php",
