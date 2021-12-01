@@ -6,7 +6,7 @@
 <?php include("components/navbar.php"); ?>
 
 <body>
-    <form action="userFunctions/signUpDatabase.php" method="POST">
+    <form action="./userFunctions/signUpDatabase.php" method="POST">
         <div style="width: 25%;    
                     position: absolute;
                     top:  35%;
